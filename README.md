@@ -1,2 +1,3 @@
-# m4rien0
-configuaration-management-joanneum
+# Configuration Management - FH Joanneum Dual Bachelor Studies
+
+Your ads could be here!
