@@ -1,4 +1,5 @@
-# Configuration Management - FH Joanneum Dual Bachelor Studies
+# Software Configuration Management #
 
-Your ads could be here!
-My Ad is here
+## Drinks Template for Exercise ###
+
+...
