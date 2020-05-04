@@ -1,13 +1,14 @@
 # Software Configuration Management
 
-__Assignment 01: Test Automation with JUnit__
+**Assignment 01: Test Automation with JUnit**
 
 Studies: FH Joanneum - MSD 2019
 
 Projectteam:
-  - [Tobias Hintermann][tobi]
-  - [Marian Korošec][marian]
-  - [Christian Sitzwohl][chrisu]
+
+- [Tobias Hintermann][tobi]
+- [Marian Korošec][marian]
+- [Christian Sitzwohl][chrisu]
 
 ## Drinks Project
 
@@ -16,18 +17,14 @@ TODO explain what our drinks programm does
 
 ## Additions to the template
 
-The following additions were made to the originial Drinks Template in the process of carrying out this task.
-The tempalte can be found here: [Drinks Project Template][template].
+The following additions were made to the original Drinks Template in the process of carrying out this task.
+The template can be found here: [Drinks Project Template][template].
 
-### Addition Hintermann
-
-TODO Explain planned features before development, add code snippets afterwards
-
-### Addition Korošec
+### Addition 1 - Cocktails
 
 TODO Explain planned features before development, add code snippets afterwards
 
-### Addition Sitzwohl
+### Addition 2 - Long Drinks
 
 TODO Explain planned features before development, add code snippets afterwards
 
