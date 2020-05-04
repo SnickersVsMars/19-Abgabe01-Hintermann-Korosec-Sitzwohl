@@ -31,7 +31,10 @@ TODO add code snippets after development
 
 ### Addition 2: Long Drinks
 
-TODO Explain planned features before development, add code snippets afterwards
+The class LongDrink is an additional subclass of the class drink. It contains two different liquids - one alcoholic and one non-alcoholic. 
+So a valid LongDrink cannot consist of two non-alcoholic liquids or two alcoholic liquids.
+Beer cannot be mixed with a non-alcoholic liquid - but if it did, an exception with the message **Radler ist kein Alkohol** should be thrown.
+On the other hand, it should be possible to add an alcoholic liquid to a beer - this is the only exception to the rule made above.
 
 [tobi]: https://github.com/fly8899
 [marian]: https://github.com/m4rien0
