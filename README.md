@@ -22,7 +22,12 @@ The template can be found here: [Drinks Project Template][template].
 
 ### Addition 1 - Cocktails
 
-TODO Explain planned features before development, add code snippets afterwards
+TODO Explain planned features before development, add code snippets afterwards    
+
+Represents a mixture of liquids which are represented by the ArrayList.  
+The class can calculate the alcohol content of each cocktail.  
+It sets the maximum volume of a standard-cocktail to 0,5l and for the party-cocktail to 1,5l.
+
 
 ### Addition 2 - Long Drinks
 
