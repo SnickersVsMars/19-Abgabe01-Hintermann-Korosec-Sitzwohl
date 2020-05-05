@@ -1,15 +1,22 @@
 package at.fhj.msd;
+
 /**
  * Class represents a simple drink liquid which can be used in
  * drinks
+ *
+ * @author      Michael Ulm
+ * @version     %I%, %G%
+ * @since       1.0
  */
 public class SimpleDrink extends Drink{
+
     /**
      * uses only one liquid
      */
     protected Liquid l;
+
     /**
-     * Creates a SimpleDrink object with given age and
+     * Creates a SimpleDrink object with the given name and
      * liquid
      *
      * @param name name of drink
@@ -21,9 +28,9 @@ public class SimpleDrink extends Drink{
     }
 
     /**
-     * Returns volume of liquid l
+     * Returns the volume of the liquid l
      *
-     * @return the volume of drink in litre
+     * @return the volume of the drink in liter
      */
     @Override
     public double getVolume() {
@@ -31,14 +38,15 @@ public class SimpleDrink extends Drink{
     }
 
     /**
-     * Returns alcohol volume percent of liquid l
+     * Returns the alcohol volume in percent of the liquid l
      *
-     * @return alcohol volume percent
+     * @return alcohol volume in percent
      */
     @Override
     public double getAlcoholPercent() {
         return l.getAlcoholPercent();
     }
+
     /**
      * Gives information if drink is alcoholic or not
      *

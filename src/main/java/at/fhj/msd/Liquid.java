@@ -1,9 +1,15 @@
 package at.fhj.msd;
+
 /**
  * Class represents a liquid which can be used in
  * drinks
+ *
+ * @author      Michael Ulm
+ * @version     %I%, %G%
+ * @since       1.0
  */
 public class Liquid {
+
     /**
      * name of liquid
      */
@@ -76,6 +82,7 @@ public class Liquid {
     public double getAlcoholPercent() {
         return alcoholPercent;
     }
+
     /**
      * Setter for alcoholPercent
      *
