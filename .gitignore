@@ -1,3 +1,7 @@
+// IntelliJ project files
 *.iml
 /.idea
+
+// Temp output files 
 out
+target
