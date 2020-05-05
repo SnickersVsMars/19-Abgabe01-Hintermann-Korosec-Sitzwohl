@@ -4,51 +4,49 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>at.fhj.iit</groupId>
+  <groupId>at.fhj.msd</groupId>
   <artifactId>Drinks</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>Drinks</name>
   <url>
-    https://github.com/michaelulm/software-configuration-management/tree/master/test-automation/junit5/Drinks
+    https://github.com/SnickersVsMars/19-Abgabe01-Hintermann-Korosec-Sitzwohl
   </url>
 
   <developers>
     <developer>
-      <id>michaelulm</id>
-      <name>Michael Ulm</name>
-      <email>michael.ulm@fh-joanneum.at</email>
-      <url>https://www.michael-ulm.at</url>
+      <id>fly8899</id>
+      <name>Tobias Hintermann</name>
+      <email>tobias.hintermann@edu.fh-joanneum.at</email>
+      <url>https://github.com/fly8899</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <organizationUrl>https://www.fh-joanneum.at/mobile-software-development/bachelor</organizationUrl>
       <roles>
-        <role>Lecturer</role>
-      </roles>
-      <timezone>Europe/Vienna</timezone>
-      <properties>
-        <picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
-      </properties>
-    </developer>
-    <developer>
-      <id>chrishofer</id>
-      <name>Christian Hofer</name>
-      <email>christian.hofer@campus02.at</email>
-      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
-      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik</organizationUrl>
-      <roles>
-        <role>Lecturer &amp; Research Scientist</role>
+        <role>Student/Developer</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
     </developer>
     <developer>
-      <id>Rigbin</id>
-      <name>Harald Schwab</name>
-      <email>harald.schwab2@fh-joanneum.at</email>
-      <url>https://github.com/Rigbin</url>
+      <id>m4rien0</id>
+      <name>Marian Korošec</name>
+      <email>marian.korosec@edu.fh-joanneum.at</email>
+      <url>https://github.com/m4rien0</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <organizationUrl>https://www.fh-joanneum.at/mobile-software-development/bachelor</organizationUrl>
       <roles>
-        <role>Researcher</role>
+        <role>Student/Developer</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+    </developer>
+    <developer>
+      <id>sitcha07</id>
+      <name>Christian Sitzwohl</name>
+      <email>christian.sitzwohl@edu.fh-joanneum.at</email>
+      <url>https://github.com/sitcha07</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <organizationUrl>https://www.fh-joanneum.at/mobile-software-development/bachelor</organizationUrl>
+      <roles>
+        <role>Student/Developer</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
       <properties/>
