@@ -16,8 +16,8 @@ This project aims to introduce us to the world of software testing and test auto
 
 The project in its core consists of Liquids and Drinks that are made up of those liquids. Whereas the template only contains a `SimpleDrink` class with a name and a single liquid, the additions made during this assignment add two further subclasses: `Cocktails` and `LongDrinks`. Each of which allow for liquids to be mixed under certain guidlines, which are elaborated in the respective sub chapters:
 
-1. [Cocktails](#addition-1-cocktails)
-2. [Long Drinks](#addition-2-long-drinks)
+1. [Cocktails](#addition-1---cocktails)
+2. [Long Drinks](#addition-2---long-drinks)
 
 ## Additions to the template
 
