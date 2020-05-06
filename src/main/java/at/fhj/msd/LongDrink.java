@@ -46,14 +46,21 @@ public class LongDrink extends Drink {
      */
     public void validateLiquids()
     throws IllegalArgumentException, RadlerException {
+        if(alcohol.getVolume() <= 0)
+        {
+            throw new IllegalArgumentException("The alcoholic liquid must contain alcohol!");
+        }
 
+        if(nonAlcohol.getVolume() >= 0)
+        {
+            throw new IllegalArgumentException("The non-alcoholic liquid must be non-alcoholic!");
+        }
     }
 
     // JavaDoc from abstract method will be used here
     @Override
     public double getVolume() {
-        // TODO
-        return 0.0;
+        return alcohol.getVolume() + nonAlcohol.getVolume();
     }
 
     // JavaDoc from abstract method will be used here
