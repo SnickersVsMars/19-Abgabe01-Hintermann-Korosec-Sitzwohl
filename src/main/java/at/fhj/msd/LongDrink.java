@@ -66,8 +66,10 @@ public class LongDrink extends Drink {
     // JavaDoc from abstract method will be used here
     @Override
     public double getAlcoholPercent() {
-        // TODO
-        return 0.0;
+        double totalVolume = alcohol.getVolume()+nonAlcohol.getVolume();
+        double alcoholVal = alcohol.getAlcoholPercent() * alcohol.getVolume();
+        double nonAlcoholVal = nonAlcohol.getAlcoholPercent() * nonAlcohol.getVolume();
+        return (alcoholVal + nonAlcoholVal) / totalVolume;
     }
 
     // JavaDoc from abstract method will be used here
