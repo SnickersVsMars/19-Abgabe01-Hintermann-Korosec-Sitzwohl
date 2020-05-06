@@ -47,27 +47,31 @@ public class LongDrink extends Drink {
     public void validateLiquids()
     throws IllegalArgumentException, RadlerException {
 
-        //Special case for beer
-        if(alcohol.getName().toLowerCase().contains("bier") || alcohol.getName().toLowerCase().contains("beer"))
+        // Special case for beer: Beer can't be mixed with a non-alcoholic drink, but mixing
+        // beer with another alcoholic drink is allowed
+        if (alcohol.getName().toLowerCase().contains("bier")
+                || alcohol.getName().toLowerCase().contains("beer"))
         {
-            if(alcohol.getVolume() <= 0)
+            if (alcohol.getAlcoholPercent() <= 0.0)
             {
-                throw new IllegalArgumentException("Why the hell are you trying to use a non-alcoholic beer for a long drink?");
+                throw new IllegalArgumentException(
+                        "Why the hell are you trying to use a non-alcoholic beer for a long drink?"
+                );
             }
 
-            if(nonAlcohol.getVolume() <= 0.0)
+            if (nonAlcohol.getAlcoholPercent() <= 0.0)
             {
                 throw new RadlerException("Radler ist kein Alkohol!");
             }
         }
         else
         {
-            if(alcohol.getVolume() <= 0)
+            if (alcohol.getAlcoholPercent() <= 0.0)
             {
                 throw new IllegalArgumentException("The alcoholic liquid must contain alcohol!");
             }
 
-            if(nonAlcohol.getVolume() >= 0)
+            if (nonAlcohol.getAlcoholPercent() > 0.0)
             {
                 throw new IllegalArgumentException("The non-alcoholic liquid must be non-alcoholic!");
             }
@@ -84,7 +88,7 @@ public class LongDrink extends Drink {
     // JavaDoc from abstract method will be used here
     @Override
     public double getAlcoholPercent() {
-        double totalVolume = alcohol.getVolume()+nonAlcohol.getVolume();
+        double totalVolume = alcohol.getVolume() + nonAlcohol.getVolume();
         double alcoholVal = alcohol.getAlcoholPercent() * alcohol.getVolume();
         double nonAlcoholVal = nonAlcohol.getAlcoholPercent() * nonAlcohol.getVolume();
         return (alcoholVal + nonAlcoholVal) / totalVolume;
