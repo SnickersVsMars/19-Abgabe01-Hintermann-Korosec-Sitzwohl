@@ -74,7 +74,6 @@ public class LongDrink extends Drink {
     // a correct long drink should always return true
     @Override
     public boolean isAlcoholic() {
-        // TODO
-        return false;
+        return true;
     }
 }
