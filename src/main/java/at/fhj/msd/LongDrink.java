@@ -46,15 +46,33 @@ public class LongDrink extends Drink {
      */
     public void validateLiquids()
     throws IllegalArgumentException, RadlerException {
-        if(alcohol.getVolume() <= 0)
+
+        //Special case for beer
+        if(alcohol.getName().toLowerCase().contains("bier") || alcohol.getName().toLowerCase().contains("beer"))
         {
-            throw new IllegalArgumentException("The alcoholic liquid must contain alcohol!");
+            if(alcohol.getVolume() <= 0)
+            {
+                throw new IllegalArgumentException("Why the hell are you trying to use a non-alcoholic beer for a long drink?");
+            }
+
+            if(nonAlcohol.getVolume() <= 0.0)
+            {
+                throw new RadlerException("Radler ist kein Alkohol!");
+            }
+        }
+        else
+        {
+            if(alcohol.getVolume() <= 0)
+            {
+                throw new IllegalArgumentException("The alcoholic liquid must contain alcohol!");
+            }
+
+            if(nonAlcohol.getVolume() >= 0)
+            {
+                throw new IllegalArgumentException("The non-alcoholic liquid must be non-alcoholic!");
+            }
         }
 
-        if(nonAlcohol.getVolume() >= 0)
-        {
-            throw new IllegalArgumentException("The non-alcoholic liquid must be non-alcoholic!");
-        }
     }
 
     // JavaDoc from abstract method will be used here
