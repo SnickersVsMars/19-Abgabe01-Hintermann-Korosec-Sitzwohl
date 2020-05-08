@@ -25,35 +25,37 @@ public class LiquidTest {
 	@Test
 	@DisplayName("Testing constructor non alcoholic")
 	public void testConstructorNonAlcoholic(){
-		assertEquals(lN.getName(), "Wasser");
-		assertEquals(lN.getVolume(), 0.3, 0.001);
-		assertEquals(lN.getAlcoholPercent(), 0, 0.001);
+		assertEquals("Wasser", lN.getName());
+		assertEquals(0.3, lN.getVolume(), 0.001);
+		assertEquals(0, lN.getAlcoholPercent(), 0.001);
 	}
+
 	@Test
 	@DisplayName("Testing constructor alcoholic")
 	public void testConstructorAlcoholic(){
-		assertEquals(lA.getName(), "Wein");
-		assertEquals(lA.getVolume(), 0.125, 0.001);
-		assertEquals(lA.getAlcoholPercent(), 13, 0.001);
+		assertEquals("Wein", lA.getName());
+		assertEquals(0.125, lA.getVolume(), 0.001);
+		assertEquals(13, lA.getAlcoholPercent(), 0.001);
 	}
+
 	@Test
 	@DisplayName("Test name setter")
 	public void testNameSetter(){
 		lN.setName("Granderwasser");
-		assertEquals(lN.getName(), "Granderwasser");
+		assertEquals("Granderwasser", lN.getName());
 	}
+
 	@Test
 	@DisplayName("Testing volume setter")
 	public void testVolumeSetter(){
 		lN.setVolume(0.5);
-		assertEquals(lN.getVolume(), 0.5, 0.001);
-
+		assertEquals(0.5, lN.getVolume(), 0.001);
 	}
+
 	@Test
 	@DisplayName("Testing alcoholPercent setters")
 	public void testAlcoholPercentSetter(){
 		lN.setAlcoholPercent(3.2);
-		assertEquals(lN.getAlcoholPercent(), 3.2, 0.001);
-
+		assertEquals(3.2, lN.getAlcoholPercent(), 0.001);
 	}
 }
