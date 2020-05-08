@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"at.fhj.msd","l":"Cocktail"},{"p":"at.fhj.msd","l":"Drink"},{"p":"at.fhj.msd","l":"Liquid"},{"p":"at.fhj.msd","l":"LiquidTest"},{"p":"at.fhj.msd","l":"LongDrink"},{"p":"at.fhj.msd.exceptions","l":"RadlerException"},{"p":"at.fhj.msd","l":"SimpleDrink"}]

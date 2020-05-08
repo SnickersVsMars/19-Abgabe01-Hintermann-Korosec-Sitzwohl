@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"at.fhj.msd"},{"l":"at.fhj.msd.exceptions"}]
