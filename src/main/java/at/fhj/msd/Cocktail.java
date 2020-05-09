@@ -33,10 +33,9 @@ public class Cocktail extends Drink {
      * @param name name of the drink
      * @param liquids list of liquids in the cocktail
      */
-    public Cocktail(String name, ArrayList<Liquid> liquids, boolean isPartySize) {
+    public Cocktail(String name, ArrayList<Liquid> liquids) {
         super(name);
         this.liquids = liquids;
-        this.isPartySize = isPartySize;
     }
 
     /**
@@ -45,6 +44,11 @@ public class Cocktail extends Drink {
      * @return
      */
     public boolean checkOverallVolume() {
+        if (getVolume() == 0.5) {
+            return isNormalSize;
+        } else if(getVolume() == 1.5) {
+            return isPartySize;
+        }
         return false;
     }
 
