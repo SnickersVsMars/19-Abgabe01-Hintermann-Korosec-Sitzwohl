@@ -24,6 +24,7 @@ public class Cocktail extends Drink {
      * party size: 1.5l
      */
     private boolean isPartySize;
+    private boolean isNormalSize;
 
     /**
      * Creates a new Cocktail object consisting of the given
@@ -41,37 +42,39 @@ public class Cocktail extends Drink {
     /**
      * Checks if the cocktail's overall volume matches its
      * given size
+     * @return
      */
-    public void checkOverallVolume() {
-        //TODO
+    public boolean checkOverallVolume() {
+        return false;
     }
 
     /**
      * Adds a liquid to the cocktail and then recalculates its
      * properties.
      */
-    public void addLiquid(Liquid l) {
-        //TODO
-    }
+    public void addLiquid(Liquid l) { liquids.add(l); }
 
     // JavaDoc from abstract method will be used here
     @Override
     public double getVolume() {
-        // TODO
-        return 0.0;
+        double volume = 0;
+        for (Liquid liquid: liquids) {
+           volume += liquid.getVolume();
+        }
+        return volume;
     }
 
     // JavaDoc from abstract method will be used here
     @Override
     public double getAlcoholPercent() {
-        // TODO
-        return 0.0;
+        double alcoholPercentage = 0;
+        for (Liquid liquid: liquids) {
+            alcoholPercentage += liquid.getAlcoholPercent();
+        }
+        return alcoholPercentage;
     }
 
     // JavaDoc from abstract method will be used here
     @Override
-    public boolean isAlcoholic() {
-        // TODO
-        return false;
-    }
+    public boolean isAlcoholic() { return true; }
 }
