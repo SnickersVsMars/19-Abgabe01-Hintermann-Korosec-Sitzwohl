@@ -21,14 +21,15 @@ class CocktailTest {
     @BeforeEach
     public void setup() {
         ArrayList<Liquid> liquids = new ArrayList<>();
-        liquids.add(new Liquid("Rum", 300, 44.4));
-        liquids.add(new Liquid("Wein", 200, 11));
+        liquids.add(new Liquid("Rum", 0.3, 44.4));
+        liquids.add(new Liquid("Wein", 0.2, 11));
         cocktail1 = new Cocktail("Wein-Rum-Cabana", liquids);
     }
 
     @Test
     @DisplayName("Testing ckeckOverallVolume()")
     void checkOverallVolume() {
+        assertEquals("NormalSize",cocktail1.checkOverallVolume());
     }
 
     @Test
@@ -39,7 +40,7 @@ class CocktailTest {
     @Test
     @DisplayName("Testing getVolume()")
     void getVolume() {
-        assertEquals(500,cocktail1.getVolume());
+        assertEquals(0.5,cocktail1.getVolume());
     }
 
     @Test

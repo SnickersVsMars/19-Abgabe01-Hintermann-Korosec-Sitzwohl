@@ -23,8 +23,8 @@ public class Cocktail extends Drink {
      * normal: 0.5l
      * party size: 1.5l
      */
-    private boolean isPartySize;
-    private boolean isNormalSize;
+    private String isPartySize = "PartySize";
+    private String isNormalSize = "NormalSize";
 
     /**
      * Creates a new Cocktail object consisting of the given
@@ -43,13 +43,13 @@ public class Cocktail extends Drink {
      * given size
      * @return
      */
-    public boolean checkOverallVolume() {
+    public String checkOverallVolume() {
         if (getVolume() == 0.5) {
-            return isNormalSize;        //Change method to if getVolume() return 1.5 or 0.5, return "isNormal" "isParty"
+            return isNormalSize;
         } else if(getVolume() == 1.5) {
             return isPartySize;
         }
-        return false;
+        return "its neither normal nor partysize";
     }
 
     /**
