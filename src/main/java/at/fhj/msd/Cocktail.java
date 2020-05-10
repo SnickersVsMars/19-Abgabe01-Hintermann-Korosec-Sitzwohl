@@ -58,6 +58,12 @@ public class Cocktail extends Drink {
      */
     public void addLiquid(Liquid l) { liquids.add(l); }
 
+    /**
+     * Return the liquids ArrayList
+     * @return
+     */
+    public ArrayList<Liquid> getLiquids() { return liquids; }
+
     // JavaDoc from abstract method will be used here
     @Override
     public double getVolume() {

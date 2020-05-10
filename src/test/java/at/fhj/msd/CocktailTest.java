@@ -35,6 +35,13 @@ class CocktailTest {
     @Test
     @DisplayName("Testing addLiquid()")
     void addLiquid() {
+        cocktail1.addLiquid(new Liquid("Saft",1,0));
+        ArrayList<Liquid> testList = new ArrayList<>();
+        testList.add(new Liquid("Rum", 0.3, 44.4));
+        testList.add(new Liquid("Wein", 0.2, 11));
+        testList.add(new Liquid("Saft",1,0));
+        assertEquals(testList.contains(new Liquid("Saft",1,0)),
+                cocktail1.getLiquids().contains(new Liquid("Saft",1,0)));
     }
 
     @Test
