@@ -45,7 +45,7 @@ public class Cocktail extends Drink {
      */
     public boolean checkOverallVolume() {
         if (getVolume() == 0.5) {
-            return isNormalSize;
+            return isNormalSize;        //Change method to if getVolume() return 1.5 or 0.5, return "isNormal" "isParty"
         } else if(getVolume() == 1.5) {
             return isPartySize;
         }
