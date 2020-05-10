@@ -5,3 +5,6 @@
 // Temp output files 
 out
 target
+
+// Default documentation folder
+docs
