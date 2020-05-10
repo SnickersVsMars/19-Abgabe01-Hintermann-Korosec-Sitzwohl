@@ -23,13 +23,13 @@ class CocktailTest {
         ArrayList<Liquid> liquids1 = new ArrayList<>();
         liquids1.add(new Liquid("Rum", 0.3, 44.4));
         liquids1.add(new Liquid("Wein", 0.2, 11));
-        cocktail1 = new Cocktail("Wein-Rum", liquids1);
+        cocktail1 = new Cocktail("Rum-Wein", liquids1);
 
         ArrayList<Liquid> liquids2 = new ArrayList<>();
         liquids2.add(new Liquid("Rum", 0.3, 44.4));
         liquids2.add(new Liquid("Wein", 0.2, 11));
         liquids2.add(new Liquid("Tequilla",1,47));
-        cocktail2 = new Cocktail("Wein-Rum-Tequilla", liquids2);
+        cocktail2 = new Cocktail("Rum-Wein-Tequilla", liquids2);
     }
 
     @Test

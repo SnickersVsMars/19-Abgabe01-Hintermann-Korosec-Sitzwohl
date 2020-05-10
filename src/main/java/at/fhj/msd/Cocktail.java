@@ -18,13 +18,7 @@ public class Cocktail extends Drink {
      * list of liquids contained in the cocktail
      */
     private ArrayList<Liquid> liquids;
-    /**
-     * defines whether the cocktail is normal or party sized
-     * normal: 0.5l
-     * party size: 1.5l
-     */
-    private String isPartySize = "PartySize";
-    private String isNormalSize = "NormalSize";
+
 
     /**
      * Creates a new Cocktail object consisting of the given
@@ -41,13 +35,17 @@ public class Cocktail extends Drink {
     /**
      * Checks if the cocktail's overall volume matches its
      * given size
-     * @return
+     *
+     * normal size = 0.5l
+     * party size = 1.5l
+     *
+     * @return a String which defines the kind of size the cocktail is
      */
     public String checkOverallVolume() {
         if (getVolume() == 0.5) {
-            return isNormalSize;
+            return "NormalSize";
         } else if(getVolume() == 1.5) {
-            return isPartySize;
+            return "PartySize";
         }
         return "its neither normal nor partysize";
     }
