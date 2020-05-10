@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Class represents a mixture of liquids resembling a cocktail.
- * Cocktails must consist of at least one non-alcoholic component
- * and are limited by volume, depending of the type of cocktail.
+ * Cocktails are limited by volume, depending of the type of cocktail.
  *
  * @author      Tobias Hintermann
  * @author      Marian Korosec
@@ -39,7 +38,7 @@ public class Cocktail extends Drink {
      * normal size = 0.5l
      * party size = 1.5l
      *
-     * @return a String which defines the kind of size the cocktail is
+     * @return String that defines the size of the cocktail
      */
     public String getCocktailSize() {
         if (getVolume() == 0.5) {
@@ -51,14 +50,14 @@ public class Cocktail extends Drink {
     }
 
     /**
-     * Adds a liquid to the cocktail and then recalculates its
-     * properties.
+     * Adds a liquid to the cocktail
      */
     public void addLiquid(Liquid l) { liquids.add(l); }
 
     /**
-     * Return the liquids ArrayList
-     * @return
+     * Returns the list of liquids in the cocktail
+     *
+     * @return the liquids ArrayList
      */
     public ArrayList<Liquid> getLiquids() { return liquids; }
 
@@ -75,11 +74,12 @@ public class Cocktail extends Drink {
     // JavaDoc from abstract method will be used here
     @Override
     public double getAlcoholPercent() {
-        double alcoholPercentage = 0;
-        for (Liquid liquid: liquids) {
-            alcoholPercentage += (liquid.getVolume()*1000)/liquid.getAlcoholPercent();
+        double alcoholPercentage = 0.0;
+        for (Liquid l: liquids) {
+            alcoholPercentage += l.getVolume() * l.getAlcoholPercent();
         }
-        return Math.floor(alcoholPercentage);
+        // rounds the percentage to 2 decimals and returns it
+        return Math.round((alcoholPercentage / getVolume()) * 100.0) / 100.0;
     }
 
     // JavaDoc from abstract method will be used here

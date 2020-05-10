@@ -34,15 +34,25 @@ class CocktailTest {
 
     @Test
     @DisplayName("Testing ckeckOverallVolume()")
-    void getCocktailSize() {
+    public void getCocktailSize() {
         assertEquals("NormalSize",cocktail1.getCocktailSize());
         assertEquals("PartySize",cocktail2.getCocktailSize());
+    }
+
+    @Test
+    @DisplayName("Testing cocktail size getter with unspecified volume")
+    public void testCocktailSizeGetter() {
+        // manipulate liquid volume, so the cocktail's volume doesn't add up to match any of the sizes
+        cocktail1.getLiquids().get(0).setVolume(0.5);
+        cocktail2.getLiquids().get(0).setVolume(0.5);
+        assertEquals("its neither normal nor partysize",cocktail1.getCocktailSize());
+        assertEquals("its neither normal nor partysize",cocktail2.getCocktailSize());
     }
 
 
     @Test
     @DisplayName("Testing addLiquid()")
-    void addLiquid() {
+    public void addLiquid() {
         cocktail1.addLiquid(new Liquid("Saft",1,0));
         ArrayList<Liquid> testList = new ArrayList<>();
         testList.add(new Liquid("Rum", 0.3, 44.4));
@@ -54,21 +64,21 @@ class CocktailTest {
 
     @Test
     @DisplayName("Testing getVolume()")
-    void getVolume() {
+    public void getVolume() {
         assertEquals(0.5,cocktail1.getVolume());
         assertEquals(1.5,cocktail2.getVolume());
     }
 
     @Test
     @DisplayName("Testing getAlcoholPercent()")
-    void getAlcoholPercent() {
-        assertEquals(24,cocktail1.getAlcoholPercent());
-        assertEquals(46,cocktail2.getAlcoholPercent());
+    public void getAlcoholPercent() {
+        assertEquals(31.04,cocktail1.getAlcoholPercent(), 0.01);
+        assertEquals(41.68,cocktail2.getAlcoholPercent(), 0.01);
     }
 
     @Test
     @DisplayName("Testing isAlcohol()")
-    void isAlcoholic() {
+    public void isAlcoholic() {
         assertEquals(true,cocktail1.isAlcoholic());
         assertEquals(true,cocktail2.isAlcoholic());
     }
