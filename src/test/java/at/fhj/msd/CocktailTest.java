@@ -20,12 +20,12 @@ class CocktailTest {
      */
     @BeforeEach
     public void setup() {
-        ArrayList<Liquid> liquids1 = new ArrayList<>();
+        liquids1 = new ArrayList<>();
         liquids1.add(new Liquid("Rum", 0.3, 44.4));
         liquids1.add(new Liquid("Wein", 0.2, 11));
         cocktail1 = new Cocktail("Rum-Wein", liquids1);
 
-        ArrayList<Liquid> liquids2 = new ArrayList<>();
+        liquids2 = new ArrayList<>();
         liquids2.add(new Liquid("Rum", 0.3, 44.4));
         liquids2.add(new Liquid("Wein", 0.2, 11));
         liquids2.add(new Liquid("Tequilla",1,47));
