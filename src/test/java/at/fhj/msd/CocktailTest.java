@@ -14,6 +14,10 @@ class CocktailTest {
     private ArrayList<Liquid> liquids;
     private Cocktail cocktail1;
 
+    /**
+     * inits an alcoholic liquid List for each cocktail
+     * inits a cocktail for each test
+     */
     @BeforeEach
     public void setup() {
         ArrayList<Liquid> liquids = new ArrayList<>();
@@ -30,7 +34,6 @@ class CocktailTest {
     @Test
     @DisplayName("Testing addLiquid()")
     void addLiquid() {
-
     }
 
     @Test
