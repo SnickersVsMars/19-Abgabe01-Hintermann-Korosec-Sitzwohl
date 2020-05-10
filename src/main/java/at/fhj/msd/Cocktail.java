@@ -46,11 +46,13 @@ public class Cocktail extends Drink {
         } else if(getVolume() == 1.5) {
             return "PartySize";
         }
-        return "its neither normal nor partysize";
+        return "neither normal nor partysize";
     }
 
     /**
      * Adds a liquid to the cocktail
+     *
+     * @param l liquid to be added to the cocktail
      */
     public void addLiquid(Liquid l) { liquids.add(l); }
 

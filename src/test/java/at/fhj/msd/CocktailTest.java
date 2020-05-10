@@ -45,8 +45,12 @@ class CocktailTest {
         // manipulate liquid volume, so the cocktail's volume doesn't add up to match any of the sizes
         cocktail1.getLiquids().get(0).setVolume(0.5);
         cocktail2.getLiquids().get(0).setVolume(0.5);
-        assertEquals("its neither normal nor partysize",cocktail1.getCocktailSize());
-        assertEquals("its neither normal nor partysize",cocktail2.getCocktailSize());
+        assertEquals("neither normal nor partysize", cocktail1.getCocktailSize(),
+                "Expected size to be \"neither normal nor partysize\", but was "
+                        + cocktail1.getCocktailSize());
+        assertEquals("neither normal nor partysize", cocktail2.getCocktailSize(),
+                "Expected size to be \"neither normal nor partysize\", but was "
+                        + cocktail2.getCocktailSize());
     }
 
 
