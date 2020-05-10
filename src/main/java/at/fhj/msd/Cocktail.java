@@ -86,5 +86,7 @@ public class Cocktail extends Drink {
 
     // JavaDoc from abstract method will be used here
     @Override
-    public boolean isAlcoholic() { return true; }
+    public boolean isAlcoholic() {
+        return getAlcoholPercent() > 0 ? true : false;
+    }
 }
