@@ -41,7 +41,7 @@ public class Cocktail extends Drink {
      *
      * @return a String which defines the kind of size the cocktail is
      */
-    public String checkOverallVolume() {
+    public String getCocktailSize() {
         if (getVolume() == 0.5) {
             return "NormalSize";
         } else if(getVolume() == 1.5) {
@@ -77,9 +77,9 @@ public class Cocktail extends Drink {
     public double getAlcoholPercent() {
         double alcoholPercentage = 0;
         for (Liquid liquid: liquids) {
-            alcoholPercentage += liquid.getAlcoholPercent();
+            alcoholPercentage += (liquid.getVolume()*1000)/liquid.getAlcoholPercent();
         }
-        return alcoholPercentage;
+        return Math.floor(alcoholPercentage);
     }
 
     // JavaDoc from abstract method will be used here

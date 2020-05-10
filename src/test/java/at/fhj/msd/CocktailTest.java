@@ -34,10 +34,11 @@ class CocktailTest {
 
     @Test
     @DisplayName("Testing ckeckOverallVolume()")
-    void checkOverallVolume() {
-        assertEquals("NormalSize",cocktail1.checkOverallVolume());
-        assertEquals("PartySize",cocktail2.checkOverallVolume());
+    void getCocktailSize() {
+        assertEquals("NormalSize",cocktail1.getCocktailSize());
+        assertEquals("PartySize",cocktail2.getCocktailSize());
     }
+
 
     @Test
     @DisplayName("Testing addLiquid()")
@@ -61,8 +62,8 @@ class CocktailTest {
     @Test
     @DisplayName("Testing getAlcoholPercent()")
     void getAlcoholPercent() {
-        assertEquals(55.4,cocktail1.getAlcoholPercent());
-        assertEquals(102.4,cocktail2.getAlcoholPercent());
+        assertEquals(24,cocktail1.getAlcoholPercent());
+        assertEquals(46,cocktail2.getAlcoholPercent());
     }
 
     @Test
