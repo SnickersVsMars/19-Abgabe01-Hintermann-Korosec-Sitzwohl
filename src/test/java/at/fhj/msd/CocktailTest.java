@@ -83,13 +83,13 @@ class CocktailTest {
     @Test
     @DisplayName("Testing addLiquid() for cocktail nr. 2")
     public void testAddLiquid2() {
-        cocktail2.addLiquid(new Liquid("Saft",1,0));
+        cocktail2.addLiquid(new Liquid("Jogurt",1,0));
         ArrayList<Liquid> testList = new ArrayList<>();
         testList.add(new Liquid("Rum", 0.3, 44.4));
         testList.add(new Liquid("Wein", 0.2, 11));
         testList.add(new Liquid("Jogurt",1,0));
-        assertEquals(testList.contains(new Liquid("Saft",1,0)),
-                cocktail2.getLiquids().contains(new Liquid("Saft",1,0)),
+        assertEquals(testList.contains(new Liquid("Jogurt",1,0)),
+                cocktail2.getLiquids().contains(new Liquid("Jogurt",1,0)),
                 "Expected new Liquid, but was not found in ArrayList");
     }
 
