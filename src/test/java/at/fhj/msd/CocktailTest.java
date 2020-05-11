@@ -32,6 +32,9 @@ class CocktailTest {
         cocktail2 = new Cocktail("Rum-Wein-Tequilla", liquids2);
     }
 
+    /**
+     * Test Cocktail-Size 1
+     */
     @Test
     @DisplayName("Testing getCocktailSize for cocktail nr. 1")
     public void testGetCocktailSize1() {
@@ -39,6 +42,9 @@ class CocktailTest {
                 "Expected \"NormalSize\" but was " + cocktail1.getCocktailSize());
     }
 
+    /**
+     * Test Cocktail-Size 2
+     */
     @Test
     @DisplayName("Testing getCocktailSize() for cocktail nr. 2")
     public void testGetCocktailSize2() {
@@ -46,6 +52,9 @@ class CocktailTest {
                 "Expected \"PartySize\" but was " + cocktail2.getCocktailSize());
     }
 
+    /**
+     * Test Cocktail-Size 1 after manipulating
+     */
     @Test
     @DisplayName("Testing cocktail size getter with unspecified volume for cocktail nr. 1")
     public void testCocktailSizeGetter1() {
@@ -56,6 +65,9 @@ class CocktailTest {
                         + cocktail1.getCocktailSize());
     }
 
+    /**
+     * Test Cocktail-Size 2 after manipulating
+     */
     @Test
     @DisplayName("Testing cocktail size getter with unspecified volume for cocktail nr. 2")
     public void testCocktailSizeGetter2() {
@@ -67,6 +79,9 @@ class CocktailTest {
     }
 
 
+    /**
+     * Test add liquid to Cocktail 1
+     */
     @Test
     @DisplayName("Testing addLiquid() for cocktail nr. 1")
     public void testAddLiquid1() {
@@ -80,6 +95,9 @@ class CocktailTest {
                 "Expected new Liquid, but was not found in ArrayList");
     }
 
+    /**
+     * Test add liquid to Cocktail 2
+     */
     @Test
     @DisplayName("Testing addLiquid() for cocktail nr. 2")
     public void testAddLiquid2() {
@@ -93,6 +111,9 @@ class CocktailTest {
                 "Expected new Liquid, but was not found in ArrayList");
     }
 
+    /**
+     * Test getVolume() of Cocktail 1
+     */
     @Test
     @DisplayName("Testing getVolume() for cocktail nr. 1")
     public void testGetVolume1() {
@@ -100,6 +121,9 @@ class CocktailTest {
                 "Expected 0.5, but was " + cocktail1.getVolume());
     }
 
+    /**
+     * Test getVolume() of Cocktail 2
+     */
     @Test
     @DisplayName("Testing getVolume() for cocktail nr. 2")
     public void testGetVolume2() {
@@ -107,6 +131,10 @@ class CocktailTest {
                 "Expected 1.5, but was " + cocktail2.getVolume());
     }
 
+
+    /**
+     * Test getAlcoholPercent() of Cocktail 1
+     */
     @Test
     @DisplayName("Testing getAlcoholPercent() for cocktail nr. 1")
     public void testGetAlcoholPercent1() {
@@ -114,6 +142,9 @@ class CocktailTest {
                 "Expected 31.04, but was " + cocktail1.getAlcoholPercent());
     }
 
+    /**
+     * Test getAlcoholPercent() of Cocktail 2
+     */
     @Test
     @DisplayName("Testing getAlcoholPercent() for cocktail nr. 2")
     public void testGetAlcoholPercent2() {
@@ -121,6 +152,9 @@ class CocktailTest {
                 "Expected 41.68, but was " + cocktail2.getAlcoholPercent());
     }
 
+    /**
+     * Test isAlcohol() of Cocktail 1
+     */
     @Test
     @DisplayName("Testing isAlcohol() for cocktail nr. 1")
     public void testIsAlcoholic1() {
@@ -128,6 +162,9 @@ class CocktailTest {
                 "Expected true, but is " + cocktail1.isAlcoholic());
     }
 
+    /**
+     * Test isAlcohol() of Cocktail 2
+     */
     @Test
     @DisplayName("Testing isAlcohol() for cocktail nr. 2")
     public void testIsAlcoholic2() {

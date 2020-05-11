@@ -19,6 +19,9 @@ public class SimpleDrinkTest {
         dN = new SimpleDrink("Apple Juice", new Liquid("Juice", 0.3, 0));
     }
 
+    /**
+     * Test constructor of an alcoholic drink
+     */
     @Test
     @DisplayName("Testing constructor with alcoholic drink")
     public void testConstructorAlcoholic() {
@@ -31,6 +34,9 @@ public class SimpleDrinkTest {
         assertTrue(dA.isAlcoholic(), "Beer should be alcoholic!");
     }
 
+    /**
+     * Test constructor of a mon-alcoholic drink
+     */
     @Test
     @DisplayName("Testing constructor with non-alcoholic drink")
     public void testConstructorNonAlcoholic() {

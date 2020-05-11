@@ -23,6 +23,9 @@ public class LongDrinkTest {
         lNBeer = new Liquid("Heineken Beer 0.0%", 0.5, 0.0);
     }
 
+    /**
+     * Test valid LongDrink with 1 alcoholic and 1 non-alcoholic liquid
+     */
     @Test
     @DisplayName("Testing constructor with valid long drink")
     public void testConstructorAlcoholic() {
@@ -41,6 +44,9 @@ public class LongDrinkTest {
         });
     }
 
+    /**
+     * Test non-valid LongDrink with 2 non-alcoholic liquids
+     */
     @Test
     @DisplayName("Testing constructor with non-valid long drink")
     public void testConstructorNonAlcoholic() {
@@ -58,6 +64,9 @@ public class LongDrinkTest {
         });
     }
 
+    /**
+     * Test valid LongDrink for the special case containing beer and another alcoholic liquid
+     */
     @Test
     @DisplayName("Testing constructor with special cases containing beer")
     public void testConstructorContainingBeer() {
@@ -76,6 +85,9 @@ public class LongDrinkTest {
         });
     }
 
+    /**
+     * Test invalid LongDrink with 2 alcoholic liquids
+     */
     @Test
     @DisplayName("Testing constructor with two alcoholic liquids")
     public void testConstructorDoubleAlcohol() {
@@ -94,7 +106,9 @@ public class LongDrinkTest {
         });
     }
 
-
+    /**
+     * Test invalid LongDrink that throws a RadlerException
+     */
     @Test
     @DisplayName("Testing constructor for special case Radler")
     public void testConstructorRadler() {
@@ -113,8 +127,12 @@ public class LongDrinkTest {
         });
     }
 
+    /**
+     * Test valid LongDrink that throws a llegalArgumentException,
+     * because of mixing non-alcohlic beer with another non-alcoholic liquid
+     */
     @Test
-    @DisplayName("Testing constructor for special case Radler")
+    @DisplayName("Testing constructor for special case non-alcoholic Radler")
     public void testConstructorNonAlcoholicRadler() {
         LongDrink longDrink = new LongDrink("non-alcoholic Radler", lNBeer, lN2);
 

@@ -22,6 +22,9 @@ public class LiquidTest {
 		lA = new Liquid("Wine", 0.125, 13);
 	}
 
+	/**
+	 * Test constructor of an non-alcoholic liquid
+	 */
 	@Test
 	@DisplayName("Testing constructor non alcoholic")
 	public void testConstructorNonAlcoholic(){
@@ -33,6 +36,9 @@ public class LiquidTest {
 				"Expected an alcohol percentage of 0, but was " + lN.getAlcoholPercent());
 	}
 
+	/**
+	 * Test constructor of an alcoholic liquid
+	 */
 	@Test
 	@DisplayName("Testing constructor alcoholic")
 	public void testConstructorAlcoholic(){
@@ -44,6 +50,9 @@ public class LiquidTest {
 				"Expected an alcohol percentage of 13, but was " + lA.getAlcoholPercent());
 	}
 
+	/**
+	 * Test name setter of a liquid
+	 */
 	@Test
 	@DisplayName("Test name setter")
 	public void testNameSetter(){
@@ -52,6 +61,9 @@ public class LiquidTest {
 				"Expected the name to be \"Granderwasser\", but was " + lN.getName());
 	}
 
+	/**
+	 * Test volume setter of a liquid
+	 */
 	@Test
 	@DisplayName("Testing volume setter")
 	public void testVolumeSetter(){
@@ -60,6 +72,9 @@ public class LiquidTest {
 				"Expected a volume of .5l, but was " + lN.getVolume());
 	}
 
+	/**
+	 * Test alcoholPercent setter of a liquid
+	 */
 	@Test
 	@DisplayName("Testing alcoholPercent setters")
 	public void testAlcoholPercentSetter(){
