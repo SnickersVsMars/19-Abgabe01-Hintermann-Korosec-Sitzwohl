@@ -7,6 +7,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Class testing the functionalities of the LongDrink class
+ *
+ * @author      Marian Korosec
+ * @author      Christian Sitzwohl
+ * @version     %I%, %G%
+ * @since       1.1
+ */
 @DisplayName("Testing LongDrink implementation")
 public class LongDrinkTest {
     private Liquid lA, lN, lN2, lBeer, lNBeer;

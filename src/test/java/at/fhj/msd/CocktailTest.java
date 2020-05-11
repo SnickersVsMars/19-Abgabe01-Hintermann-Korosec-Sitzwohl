@@ -8,6 +8,14 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Class testing the functionalities of the Cocktail class
+ *
+ * @author      Marian Korosec
+ * @author      Tobias Hintermann
+ * @version     %I%, %G%
+ * @since       1.1
+ */
 @DisplayName("Testing Cocktail implementation")
 class CocktailTest {
 

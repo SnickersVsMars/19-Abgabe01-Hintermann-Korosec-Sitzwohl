@@ -7,7 +7,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * Class testing the functionalities of the Liquid class
+ *
+ * @author      Marian Korosec
+ * @author      Michael Ulm
+ * @version     %I%, %G%
+ * @since       1.0
+ */
 @DisplayName("Testing Liquid implementation")
 public class LiquidTest {
 	private Liquid lN, lA;

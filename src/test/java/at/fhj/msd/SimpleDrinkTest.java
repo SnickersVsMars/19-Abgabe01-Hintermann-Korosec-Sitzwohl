@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Class testing the functionalities of the SimpleDrink class
+ *
+ * @author      Marian Korosec
+ * @version     %I%, %G%
+ * @since       1.1
+ */
 @DisplayName("Testing SimpleDrink implementation")
 public class SimpleDrinkTest {
     private SimpleDrink dA, dN;
