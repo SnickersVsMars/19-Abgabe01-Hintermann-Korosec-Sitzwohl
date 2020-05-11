@@ -98,9 +98,11 @@ class CocktailTest {
         testList.add(new Liquid("Rum", 0.3, 44.4));
         testList.add(new Liquid("Wein", 0.2, 11));
         testList.add(new Liquid("Saft",1,0));
-        assertEquals(testList.contains(new Liquid("Saft",1,0)),
-                cocktail1.getLiquids().contains(new Liquid("Saft",1,0)),
-                "Expected new Liquid, but was not found in ArrayList");
+        for (int i = 0; i < cocktail1.getLiquids().size()-1; i++) {
+            assertEquals(testList.get(i).getName(),cocktail1.getLiquids().get(i).getName(),"Expected " + testList.get(i).getName() + " but was " + cocktail1.getLiquids().get(i).getName());
+            assertEquals(testList.get(i).getVolume(),cocktail1.getLiquids().get(i).getVolume(),"Expected " + testList.get(i).getVolume() + " but was " + cocktail1.getLiquids().get(i).getVolume());
+            assertEquals(testList.get(i).getAlcoholPercent(),cocktail1.getLiquids().get(i).getAlcoholPercent(),"Expected " + testList.get(i).getAlcoholPercent() + " but was " + cocktail1.getLiquids().get(i).getAlcoholPercent());
+        }
     }
 
     /**
@@ -113,10 +115,13 @@ class CocktailTest {
         ArrayList<Liquid> testList = new ArrayList<>();
         testList.add(new Liquid("Rum", 0.3, 44.4));
         testList.add(new Liquid("Wein", 0.2, 11));
+        testList.add(new Liquid("Tequilla",1,47));
         testList.add(new Liquid("Jogurt",1,0));
-        assertEquals(testList.contains(new Liquid("Jogurt",1,0)),
-                cocktail2.getLiquids().contains(new Liquid("Jogurt",1,0)),
-                "Expected new Liquid, but was not found in ArrayList");
+        for (int i = 0; i < cocktail2.getLiquids().size()-1; i++) {
+            assertEquals(testList.get(i).getName(),cocktail2.getLiquids().get(i).getName(),"Expected " + testList.get(i).getName() + " but was " + cocktail2.getLiquids().get(i).getName());
+            assertEquals(testList.get(i).getVolume(),cocktail2.getLiquids().get(i).getVolume(),"Expected " + testList.get(i).getVolume() + " but was " + cocktail2.getLiquids().get(i).getVolume());
+            assertEquals(testList.get(i).getAlcoholPercent(),cocktail2.getLiquids().get(i).getAlcoholPercent(),"Expected " + testList.get(i).getAlcoholPercent() + " but was " + cocktail2.getLiquids().get(i).getAlcoholPercent());
+        }
     }
 
     /**
