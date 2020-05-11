@@ -1,5 +1,6 @@
 package at.fhj.msd;
 
+import at.fhj.msd.exceptions.RadlerException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Testing LongDrink implementation")
 public class LongDrinkTest {
-    private Liquid lA, lN, lN2, lBeer;
+    private Liquid lA, lN, lN2, lBeer, lNBeer;
 
     /**
      * inits an alcoholic and nonalcoholic liquid for each test
@@ -19,6 +20,7 @@ public class LongDrinkTest {
         lN2 = new Liquid("Fanta", 0.3, 0);
         lA = new Liquid("Havana White Rum", 0.04, 40);
         lBeer = new Liquid("Heineken Beer", 0.5, 5.1);
+        lNBeer = new Liquid("Heineken Beer 0.0%", 0.5, 0.0);
     }
 
     @Test
@@ -70,6 +72,43 @@ public class LongDrinkTest {
         assertTrue(longDrink.isAlcoholic(), "A valid long drink should be alcoholic!");
 
         assertDoesNotThrow(() -> {
+            longDrink.validateLiquids();
+        });
+    }
+
+
+    @Test
+    @DisplayName("Testing constructor for special case Radler")
+    public void testConstructorRadler() {
+        LongDrink longDrink = new LongDrink("Radler", lBeer, lN2);
+
+        assertEquals("Radler", longDrink.name,
+                "Expected the name to be \"Radler\", but was " + longDrink.name);
+        assertEquals(0.8, longDrink.getVolume(), 0.001,
+                "Expected a volume of .8l, but was " + longDrink.getVolume());
+        assertEquals(3.1875, longDrink.getAlcoholPercent(), 0.001,
+                "Expected an alcohol percentage of 3.1875, but was " + longDrink.getAlcoholPercent());
+        assertTrue(longDrink.isAlcoholic(), "A valid long drink should be alcoholic!");
+
+        assertThrows(RadlerException.class, () -> {
+            longDrink.validateLiquids();
+        });
+    }
+
+    @Test
+    @DisplayName("Testing constructor for special case Radler")
+    public void testConstructorNonAlcoholicRadler() {
+        LongDrink longDrink = new LongDrink("non-alcoholic Radler", lNBeer, lN2);
+
+        assertEquals("non-alcoholic Radler", longDrink.name,
+                "Expected the name to be \"non-alcoholic Radler\", but was " + longDrink.name);
+        assertEquals(0.8, longDrink.getVolume(), 0.001,
+                "Expected a volume of .8l, but was " + longDrink.getVolume());
+        assertEquals(0.0, longDrink.getAlcoholPercent(), 0.001,
+                "Expected an alcohol percentage of 0.0, but was " + longDrink.getAlcoholPercent());
+        assertTrue(longDrink.isAlcoholic(), "A valid long drink should be alcoholic!");
+
+        assertThrows(IllegalArgumentException.class, () -> {
             longDrink.validateLiquids();
         });
     }
