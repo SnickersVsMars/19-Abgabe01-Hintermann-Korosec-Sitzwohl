@@ -76,6 +76,24 @@ public class LongDrinkTest {
         });
     }
 
+    @Test
+    @DisplayName("Testing constructor with two alcoholic liquids")
+    public void testConstructorDoubleAlcohol() {
+        LongDrink longDrink = new LongDrink("Double Rum", lA, lA);
+
+        assertEquals("Double Rum", longDrink.name,
+                "Expected the name to be \"Double Rum\", but was " + longDrink.name);
+        assertEquals(0.08, longDrink.getVolume(), 0.001,
+                "Expected a volume of .08l, but was " + longDrink.getVolume());
+        assertEquals(40.0, longDrink.getAlcoholPercent(), 0.001,
+                "Expected an alcohol percentage of 40.0, but was " + longDrink.getAlcoholPercent());
+        assertTrue(longDrink.isAlcoholic(), "A valid long drink should be alcoholic!");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            longDrink.validateLiquids();
+        });
+    }
+
 
     @Test
     @DisplayName("Testing constructor for special case Radler")
