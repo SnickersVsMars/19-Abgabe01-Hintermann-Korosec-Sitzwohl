@@ -37,6 +37,28 @@ So a valid LongDrink cannot consist of two non-alcoholic liquids or two alcoholi
 Beer cannot be mixed with a non-alcoholic liquid - but if it did, an exception with the message **Radler ist kein Alkohol** should be thrown.
 On the other hand, it should be possible to add an alcoholic liquid to a beer - this is the only exception to the rule made above.
 
+Here you can see a short code snippet, which uses the RadlerException:
+```java
+// Special case for beer: Beer can't be mixed with a non-alcoholic drink, but mixing
+// beer with another alcoholic drink is allowed
+if (alcohol.getName().toLowerCase().contains("bier")
+        || alcohol.getName().toLowerCase().contains("beer"))
+{
+    if (alcohol.getAlcoholPercent() <= 0.0)
+    {
+        throw new IllegalArgumentException(
+                "Why the hell are you trying to use a non-alcoholic beer for a long drink?"
+        );
+    }
+
+    if (nonAlcohol.getAlcoholPercent() <= 0.0)
+    {
+        throw new RadlerException("Radler ist kein Alkohol!");
+    }
+}
+```
+
+
 [tobi]: https://github.com/fly8899
 [marian]: https://github.com/m4rien0
 [chrisu]: https://github.com/sitcha07
