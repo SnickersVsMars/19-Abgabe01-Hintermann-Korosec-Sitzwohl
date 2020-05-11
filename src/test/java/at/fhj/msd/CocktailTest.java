@@ -41,7 +41,33 @@ class CocktailTest {
     }
 
     /**
-     * Test Cocktail-Size 1
+     * Test Constructor for normal sized Cocktail 1
+     */
+    @Test
+    @DisplayName("Testing getCocktailSize for cocktail nr. 1")
+    public void testConstructorCocktail1() {
+        assertEquals(0.5,cocktail1.getVolume(),
+                "Expected 0.5, but was " + cocktail1.getVolume());
+        assertEquals(31.04, cocktail1.getAlcoholPercent(), 0.01,
+                "Expected 31.04, but was " + cocktail1.getAlcoholPercent());
+        assertTrue(cocktail1.isAlcoholic(), "Cocktail1 should be alcoholic!");
+    }
+
+    /**
+     * Test Constructor for party sized Cocktail 2
+     */
+    @Test
+    @DisplayName("Testing getCocktailSize for cocktail nr. 1")
+    public void testConstructorCocktail2() {
+        assertEquals(1.5,cocktail2.getVolume(),
+                "Expected 1.5, but was " + cocktail2.getVolume());
+        assertEquals(41.68, cocktail2.getAlcoholPercent(), 0.01,
+                "Expected 41.68, but was " + cocktail2.getAlcoholPercent());
+        assertTrue(cocktail2.isAlcoholic(), "Cocktail2 should be alcoholic!");
+    }
+
+    /**
+     * Test normal size Cocktail-Size 1
      */
     @Test
     @DisplayName("Testing getCocktailSize for cocktail nr. 1")
@@ -51,7 +77,7 @@ class CocktailTest {
     }
 
     /**
-     * Test Cocktail-Size 2
+     * Test party size Cocktail-Size 2
      */
     @Test
     @DisplayName("Testing getCocktailSize() for cocktail nr. 2")
@@ -61,26 +87,17 @@ class CocktailTest {
     }
 
     /**
-     * Test Cocktail-Size 1 after manipulating
+     * Test Cocktail-Size after manipulating
      */
     @Test
-    @DisplayName("Testing cocktail size getter with unspecified volume for cocktail nr. 1")
+    @DisplayName("Testing cocktail size getter with unspecified volume")
     public void testCocktailSizeGetter1() {
         // manipulate liquid volume, so the cocktail's volume doesn't add up to match any of the sizes
         cocktail1.getLiquids().get(0).setVolume(0.5);
+        cocktail2.getLiquids().get(0).setVolume(2);
         assertEquals("neither normal nor partysize", cocktail1.getCocktailSize(),
                 "Expected size to be \"neither normal nor partysize\", but was "
                         + cocktail1.getCocktailSize());
-    }
-
-    /**
-     * Test Cocktail-Size 2 after manipulating
-     */
-    @Test
-    @DisplayName("Testing cocktail size getter with unspecified volume for cocktail nr. 2")
-    public void testCocktailSizeGetter2() {
-        // manipulate liquid volume, so the cocktail's volume doesn't add up to match any of the sizes
-        cocktail2.getLiquids().get(0).setVolume(2);
         assertEquals("neither normal nor partysize", cocktail2.getCocktailSize(),
                 "Expected size to be \"neither normal nor partysize\", but was "
                         + cocktail2.getCocktailSize());
@@ -88,7 +105,7 @@ class CocktailTest {
 
 
     /**
-     * Test add liquid to Cocktail 1
+     * Test add liquid for normal sized Cocktail 1
      */
     @Test
     @DisplayName("Testing addLiquid() for cocktail nr. 1")
@@ -98,6 +115,7 @@ class CocktailTest {
         testList.add(new Liquid("Rum", 0.3, 44.4));
         testList.add(new Liquid("Wein", 0.2, 11));
         testList.add(new Liquid("Saft",1,0));
+        // List assertions have issues with references => compare via for-loop
         for (int i = 0; i < cocktail1.getLiquids().size()-1; i++) {
             assertEquals(testList.get(i).getName(),cocktail1.getLiquids().get(i).getName(),"Expected " + testList.get(i).getName() + " but was " + cocktail1.getLiquids().get(i).getName());
             assertEquals(testList.get(i).getVolume(),cocktail1.getLiquids().get(i).getVolume(),"Expected " + testList.get(i).getVolume() + " but was " + cocktail1.getLiquids().get(i).getVolume());
@@ -106,7 +124,7 @@ class CocktailTest {
     }
 
     /**
-     * Test add liquid to Cocktail 2
+     * Test add liquid to party sized Cocktail 2
      */
     @Test
     @DisplayName("Testing addLiquid() for cocktail nr. 2")
@@ -124,64 +142,4 @@ class CocktailTest {
         }
     }
 
-    /**
-     * Test getVolume() of Cocktail 1
-     */
-    @Test
-    @DisplayName("Testing getVolume() for cocktail nr. 1")
-    public void testGetVolume1() {
-        assertEquals(0.5,cocktail1.getVolume(),
-                "Expected 0.5, but was " + cocktail1.getVolume());
-    }
-
-    /**
-     * Test getVolume() of Cocktail 2
-     */
-    @Test
-    @DisplayName("Testing getVolume() for cocktail nr. 2")
-    public void testGetVolume2() {
-        assertEquals(1.5,cocktail2.getVolume(),
-                "Expected 1.5, but was " + cocktail2.getVolume());
-    }
-
-
-    /**
-     * Test getAlcoholPercent() of Cocktail 1
-     */
-    @Test
-    @DisplayName("Testing getAlcoholPercent() for cocktail nr. 1")
-    public void testGetAlcoholPercent1() {
-        assertEquals(31.04,cocktail1.getAlcoholPercent(), 0.01,
-                "Expected 31.04, but was " + cocktail1.getAlcoholPercent());
-    }
-
-    /**
-     * Test getAlcoholPercent() of Cocktail 2
-     */
-    @Test
-    @DisplayName("Testing getAlcoholPercent() for cocktail nr. 2")
-    public void testGetAlcoholPercent2() {
-        assertEquals(41.68,cocktail2.getAlcoholPercent(), 0.01,
-                "Expected 41.68, but was " + cocktail2.getAlcoholPercent());
-    }
-
-    /**
-     * Test isAlcohol() of Cocktail 1
-     */
-    @Test
-    @DisplayName("Testing isAlcohol() for cocktail nr. 1")
-    public void testIsAlcoholic1() {
-        assertEquals(true,cocktail1.isAlcoholic(),
-                "Expected true, but is " + cocktail1.isAlcoholic());
-    }
-
-    /**
-     * Test isAlcohol() of Cocktail 2
-     */
-    @Test
-    @DisplayName("Testing isAlcohol() for cocktail nr. 2")
-    public void testIsAlcoholic2() {
-        assertEquals(true,cocktail2.isAlcoholic(),
-                "Expected true, but is " + cocktail2.isAlcoholic());
-    }
 }
