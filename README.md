@@ -26,9 +26,17 @@ The template can be found here: [Drinks Project Template][template].
 
 ### Addition 1 - Cocktails
 
-Represents a mixture of liquids which are represented by the ArrayList.  
-The class can calculate the alcohol content of each cocktail.  
-It sets the maximum volume of a standard-cocktail to 0,5l and for the party-cocktail to 1,5l.
+Cocktail extends the class drink. The class should reflect a "real world" cocktail. Therefore it holds different Liquids in an ArrayList, which are 
+needed for the basic function of a cocktail.  
+
+Cocktail can:  
+- Differ between cocktail-sizes.  
+- Add new liquids.  
+- Give information about the volume and alcohol-percentage of the finished cocktail.  
+- Tell if non-alcoholic or alcoholic cocktail.
+
+Cocktail-sizes:  
+There are two sizes. Normal-size and party-size, which are 0,5l and 1,5l.  
 
 ### Addition 2 - Long Drinks
 
