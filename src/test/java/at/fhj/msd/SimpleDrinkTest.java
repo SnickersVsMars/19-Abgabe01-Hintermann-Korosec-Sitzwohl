@@ -18,7 +18,7 @@ public class SimpleDrinkTest {
     private SimpleDrink dA, dN;
 
     /**
-     * inits an alcoholic and nonalcoholic liquid for each test
+     * inits an alcoholic and nonalcoholic drink for each test
      */
     @BeforeEach
     public void setup() {
@@ -42,7 +42,7 @@ public class SimpleDrinkTest {
     }
 
     /**
-     * Test constructor of a mon-alcoholic drink
+     * Test constructor of a non-alcoholic drink
      */
     @Test
     @DisplayName("Testing constructor with non-alcoholic drink")

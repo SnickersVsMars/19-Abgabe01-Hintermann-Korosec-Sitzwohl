@@ -32,8 +32,8 @@ public class Cocktail extends Drink {
     }
 
     /**
-     * Checks if the cocktail's overall volume matches its
-     * given size
+     * Checks the cocktail's overall volume and returns
+     * the size it matched
      *
      * normal size = 0.5l
      * party size = 1.5l
@@ -67,8 +67,8 @@ public class Cocktail extends Drink {
     @Override
     public double getVolume() {
         double volume = 0;
-        for (Liquid liquid: liquids) {
-           volume += liquid.getVolume();
+        for (Liquid l: liquids) {
+           volume += l.getVolume();
         }
         return volume;
     }

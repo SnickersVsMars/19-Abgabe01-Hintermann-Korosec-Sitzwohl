@@ -46,9 +46,9 @@ class CocktailTest {
     @Test
     @DisplayName("Testing getCocktailSize for cocktail nr. 1")
     public void testConstructorCocktail1() {
-        assertEquals(0.5,cocktail1.getVolume(),
+        assertEquals(0.5,cocktail1.getVolume(), 0.001,
                 "Expected 0.5, but was " + cocktail1.getVolume());
-        assertEquals(31.04, cocktail1.getAlcoholPercent(), 0.01,
+        assertEquals(31.04, cocktail1.getAlcoholPercent(), 0.001,
                 "Expected 31.04, but was " + cocktail1.getAlcoholPercent());
         assertTrue(cocktail1.isAlcoholic(), "Cocktail1 should be alcoholic!");
     }
@@ -59,9 +59,9 @@ class CocktailTest {
     @Test
     @DisplayName("Testing getCocktailSize for cocktail nr. 1")
     public void testConstructorCocktail2() {
-        assertEquals(1.5,cocktail2.getVolume(),
+        assertEquals(1.5,cocktail2.getVolume(), 0.001,
                 "Expected 1.5, but was " + cocktail2.getVolume());
-        assertEquals(41.68, cocktail2.getAlcoholPercent(), 0.01,
+        assertEquals(41.68, cocktail2.getAlcoholPercent(), 0.001,
                 "Expected 41.68, but was " + cocktail2.getAlcoholPercent());
         assertTrue(cocktail2.isAlcoholic(), "Cocktail2 should be alcoholic!");
     }
@@ -117,9 +117,18 @@ class CocktailTest {
         testList.add(new Liquid("Saft",1,0));
         // List assertions have issues with references => compare via for-loop
         for (int i = 0; i < cocktail1.getLiquids().size()-1; i++) {
-            assertEquals(testList.get(i).getName(),cocktail1.getLiquids().get(i).getName(),"Expected " + testList.get(i).getName() + " but was " + cocktail1.getLiquids().get(i).getName());
-            assertEquals(testList.get(i).getVolume(),cocktail1.getLiquids().get(i).getVolume(),"Expected " + testList.get(i).getVolume() + " but was " + cocktail1.getLiquids().get(i).getVolume());
-            assertEquals(testList.get(i).getAlcoholPercent(),cocktail1.getLiquids().get(i).getAlcoholPercent(),"Expected " + testList.get(i).getAlcoholPercent() + " but was " + cocktail1.getLiquids().get(i).getAlcoholPercent());
+            assertEquals(testList.get(i).getName(),
+                    cocktail1.getLiquids().get(i).getName(),
+                    "Expected " + testList.get(i).getName()
+                            + " but was " + cocktail1.getLiquids().get(i).getName());
+            assertEquals(testList.get(i).getVolume(),
+                    cocktail1.getLiquids().get(i).getVolume(), 0.001,
+                    "Expected " + testList.get(i).getVolume()
+                            + " but was " + cocktail1.getLiquids().get(i).getVolume());
+            assertEquals(testList.get(i).getAlcoholPercent(),
+                    cocktail1.getLiquids().get(i).getAlcoholPercent(), 0.001,
+                    "Expected " + testList.get(i).getAlcoholPercent()
+                            + " but was " + cocktail1.getLiquids().get(i).getAlcoholPercent());
         }
     }
 
@@ -136,9 +145,18 @@ class CocktailTest {
         testList.add(new Liquid("Tequilla",1,47));
         testList.add(new Liquid("Jogurt",1,0));
         for (int i = 0; i < cocktail2.getLiquids().size()-1; i++) {
-            assertEquals(testList.get(i).getName(),cocktail2.getLiquids().get(i).getName(),"Expected " + testList.get(i).getName() + " but was " + cocktail2.getLiquids().get(i).getName());
-            assertEquals(testList.get(i).getVolume(),cocktail2.getLiquids().get(i).getVolume(),"Expected " + testList.get(i).getVolume() + " but was " + cocktail2.getLiquids().get(i).getVolume());
-            assertEquals(testList.get(i).getAlcoholPercent(),cocktail2.getLiquids().get(i).getAlcoholPercent(),"Expected " + testList.get(i).getAlcoholPercent() + " but was " + cocktail2.getLiquids().get(i).getAlcoholPercent());
+            assertEquals(testList.get(i).getName(),
+                    cocktail2.getLiquids().get(i).getName(),
+                    "Expected " + testList.get(i).getName()
+                            + " but was " + cocktail2.getLiquids().get(i).getName());
+            assertEquals(testList.get(i).getVolume(),
+                    cocktail2.getLiquids().get(i).getVolume(), 0.001,
+                    "Expected " + testList.get(i).getVolume()
+                            + " but was " + cocktail2.getLiquids().get(i).getVolume());
+            assertEquals(testList.get(i).getAlcoholPercent(),
+                    cocktail2.getLiquids().get(i).getAlcoholPercent(), 0.001,
+                    "Expected " + testList.get(i).getAlcoholPercent()
+                            + " but was " + cocktail2.getLiquids().get(i).getAlcoholPercent());
         }
     }
 

@@ -3,6 +3,10 @@ package at.fhj.msd.exceptions;
 /**
  * Exception that is used when Beer is mixed with a non-alcoholic
  * drink
+ *
+ *  @author      Marian Korošec
+ *  @version     %I%, %G%
+ *  @since       1.1
  */
 public class RadlerException extends Exception {
 
